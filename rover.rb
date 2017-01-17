@@ -33,7 +33,7 @@ class Rover
     when  :e
       @x += 1
     when :w
-      @y -= 1
+      @x -= 1
     end
   end
 
@@ -63,40 +63,15 @@ class Rover
     end
   end
 
+  def follow(arg)
+    arg.chars.each do |x|
+      if x == 'L'
+        left
+      elsif x == 'F'
+      forward
+      else x == 'R'
+      right
+    end
+    end
+    end
 end
-
-
-#     if direction == n
-#       if turn == right
-#         direction == 'East'
-#       else turn == left
-#       direction == 'West'
-#
-#      if direction == e
-#         if turn == right
-#           direction == 'South'
-#         else turn == left
-#         direction == 'North'
-#
-#         if direction == s
-#           if turn == right
-#             direction == 'West'
-#           else turn == left
-#           direction == 'East'
-#
-#             if direction == w
-#               if turn == right
-#                 direction == 'North'
-#                 else turn == left
-#                        direction == 'South'
-#               end
-#               end
-#             end
-#         end
-#         end
-#      end
-#       end
-#     end
-#   end
-#
-
