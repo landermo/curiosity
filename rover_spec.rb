@@ -8,7 +8,7 @@ describe Rover do
     expect(rover.y).to eq 0
   end
 
-  it 'can set a heading' do
+  skip 'can set a heading' do
     rover = Rover.new
 
     direction = [:n, :s, :e, :w].sample
