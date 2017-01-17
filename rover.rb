@@ -1,5 +1,6 @@
 class Rover
   attr_reader :n, :e, :w, :s
+  attr_accessor :heading
 
   def initialize
     @x = 0
@@ -24,24 +25,23 @@ class Rover
   end
 
   def forward
-    if :n
+    case @direction
+    when  :n
       @y += 1
-    elsif :s
+    when :s
       @y -= 1
-    elsif :e
+    when  :e
       @x += 1
-    else :w
+    when :w
       @y -= 1
     end
   end
 
   def left
-    @x -= 1
     @direction = :w
   end
 
   def right
-    @x += 1
     @direction = :e
   end
 
