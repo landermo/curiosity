@@ -38,7 +38,17 @@ class Rover
   end
 
   def left
-    @direction = :w
+    case @direction
+    when :n
+      @direction = :w
+      when :w
+        @direction = :s
+      when :s
+        @direction = :e
+      when :e
+        @direction = :n
+    end
+
   end
 
   def right
